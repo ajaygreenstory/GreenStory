@@ -45,18 +45,19 @@ it.only('LoginTests', () => {
   BasicInfo.setWeightUnit(data.weightUnit);
   BasicInfo.clickOnAssignDefault();
   BasicInfo.clickOnAssignDefaultComfirm();
+  cy.wait(12000);
   
  
   //Add Component
- // SCATest.AddComponentDirect();
- // SCATest.AddComponenteExitingUseAsIs();
- // SCATest.AddComponenteExitingDuplicate();
+   SCATest.AddComponentDirect();
+   SCATest.AddComponenteExitingUseAsIs();
+   SCATest.AddComponenteExitingDuplicate();
 
    // Replce Component
-  // SCATest.clickOnReplaceComponent();
-  // SCATest.ReplaceComponentDirect();
-  // SCATest.ReplaceExitingComponentUseAsIs();
-  // SCATest.ReplaceExitingComponentDuplicate();
+   SCATest.clickOnReplaceComponent();
+   SCATest.ReplaceComponentDirect();
+   SCATest.ReplaceExitingComponentUseAsIs();
+   SCATest.ReplaceExitingComponentDuplicate();
  
    SCATest.ClickOnCancelBtn();
   

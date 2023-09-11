@@ -109,13 +109,13 @@ cy.get(this.LinenFabricRedioBtn).eq(0).check();
 cy.get(this.DuplicateAddBtn).click();
 cy.xpath(this.value).type("0.7");
 cy.xpath(this.submit).click();
+cy.wait(12000);
 }
 
 ClickOnCancelBtn()
 {
     
 cy.xpath(this.CancelBtn).click();
-cy.wait(6000);
 cy.xpath(this.CancelBtnConfirm).click();
 cy.xpath(this.ContextMenuBtn).click();
 cy.xpath(this.CalculateFootPrint).click();

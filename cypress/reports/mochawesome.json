@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-09-11T12:52:29.509Z",
-    "end": "2023-09-11T12:53:28.709Z",
-    "duration": 59200,
+    "start": "2023-09-11T13:50:00.192Z",
+    "end": "2023-09-11T13:51:05.357Z",
+    "duration": 65165,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e977113c-dc28-46e4-a9a0-939d4e8f33c8",
+      "uuid": "24650d5c-8913-4b5f-8d35-36effcec8fff",
       "title": "",
       "fullFile": "cypress\\e2e\\spec-copy-1.cy.js",
       "file": "cypress\\e2e\\spec-copy-1.cy.js",
@@ -29,29 +29,29 @@
           "title": "LoginTests",
           "fullTitle": "LoginTests",
           "timedOut": null,
-          "duration": 57311,
+          "duration": 62512,
           "state": "passed",
           "speed": "slow",
           "pass": true,
           "fail": false,
           "pending": false,
           "context": null,
-          "code": "cy.visit(\"https://app-staging.greenstory.ca/logout\");\ncy.fixture('loginPage').then(data => {\n  const logins = new _LoginPages.default();\n  const Profiles = new _ProfilePage.default();\n  const Listings = new _PrdListingPage.default();\n  const BasicInfo = new _BasicProductInfo.default();\n  const SCATest = new _SupplyChainAccordions.default();\n  logins.setUserName(data.username);\n  logins.setPassword(data.password);\n  logins.clickLogin();\n  //login.login(data.username,data.password);\n  //profile page\n  Profiles.clickOnProdctMenu();\n  Profiles.clickOnProduct();\n  // listing Page\n  Listings.clickOnAddProducts();\n  // Basic Info\n  //cy.fixture('loginPage').then((data) =>{\n  cy.fixture('PrdDetails').then(data => {\n    BasicInfo.setType(data.type);\n    BasicInfo.setCode(data.code);\n    BasicInfo.setName(data.name);\n    BasicInfo.setsku(data.sku);\n    BasicInfo.setCategory(data.category);\n    BasicInfo.setSubcategory(data.subcategory);\n    BasicInfo.setStyle(data.style);\n    BasicInfo.setDeparment(data.deparment);\n    BasicInfo.setWeight(data.weight);\n    BasicInfo.setWeightUnit(data.weightUnit);\n    BasicInfo.clickOnAssignDefault();\n    BasicInfo.clickOnAssignDefaultComfirm();\n    //Add Component\n    // SCATest.AddComponentDirect();\n    // SCATest.AddComponenteExitingUseAsIs();\n    // SCATest.AddComponenteExitingDuplicate();\n    // Replce Component\n    // SCATest.clickOnReplaceComponent();\n    // SCATest.ReplaceComponentDirect();\n    // SCATest.ReplaceExitingComponentUseAsIs();\n    // SCATest.ReplaceExitingComponentDuplicate();\n    SCATest.ClickOnCancelBtn();\n  });\n});",
+          "code": "cy.visit(\"https://app-staging.greenstory.ca/logout\");\ncy.fixture('loginPage').then(data => {\n  const logins = new _LoginPages.default();\n  const Profiles = new _ProfilePage.default();\n  const Listings = new _PrdListingPage.default();\n  const BasicInfo = new _BasicProductInfo.default();\n  const SCATest = new _SupplyChainAccordions.default();\n  logins.setUserName(data.username);\n  logins.setPassword(data.password);\n  logins.clickLogin();\n  //login.login(data.username,data.password);\n  //profile page\n  Profiles.clickOnProdctMenu();\n  Profiles.clickOnProduct();\n  // listing Page\n  Listings.clickOnAddProducts();\n  // Basic Info\n  //cy.fixture('loginPage').then((data) =>{\n  cy.fixture('PrdDetails').then(data => {\n    BasicInfo.setType(data.type);\n    BasicInfo.setCode(data.code);\n    BasicInfo.setName(data.name);\n    BasicInfo.setsku(data.sku);\n    BasicInfo.setCategory(data.category);\n    BasicInfo.setSubcategory(data.subcategory);\n    BasicInfo.setStyle(data.style);\n    BasicInfo.setDeparment(data.deparment);\n    BasicInfo.setWeight(data.weight);\n    BasicInfo.setWeightUnit(data.weightUnit);\n    BasicInfo.clickOnAssignDefault();\n    BasicInfo.clickOnAssignDefaultComfirm();\n    cy.wait(12000);\n    //Add Component\n    // SCATest.AddComponentDirect();\n    // SCATest.AddComponenteExitingUseAsIs();\n    // SCATest.AddComponenteExitingDuplicate();\n    // Replce Component\n    // SCATest.clickOnReplaceComponent();\n    // SCATest.ReplaceComponentDirect();\n    // SCATest.ReplaceExitingComponentUseAsIs();\n    // SCATest.ReplaceExitingComponentDuplicate();\n    SCATest.ClickOnCancelBtn();\n  });\n});",
           "err": {},
-          "uuid": "d455fc5e-2101-4e5b-a704-1e3e4ef8cee6",
-          "parentUUID": "e977113c-dc28-46e4-a9a0-939d4e8f33c8",
+          "uuid": "3f07b59e-7c3c-4eb5-a3eb-f4cb2915a005",
+          "parentUUID": "24650d5c-8913-4b5f-8d35-36effcec8fff",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
       "passes": [
-        "d455fc5e-2101-4e5b-a704-1e3e4ef8cee6"
+        "3f07b59e-7c3c-4eb5-a3eb-f4cb2915a005"
       ],
       "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 57311,
+      "duration": 62512,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000
