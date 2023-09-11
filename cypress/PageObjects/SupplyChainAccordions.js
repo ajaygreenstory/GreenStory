@@ -115,8 +115,8 @@ ClickOnCancelBtn()
 {
     
 cy.xpath(this.CancelBtn).click();
+cy.wait(6000);
 cy.xpath(this.CancelBtnConfirm).click();
-//cy.wait(3000);
 cy.xpath(this.ContextMenuBtn).click();
 cy.xpath(this.CalculateFootPrint).click();
 cy.xpath(this.CalculateFootPrintConfirm).click();
