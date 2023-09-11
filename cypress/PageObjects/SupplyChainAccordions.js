@@ -120,7 +120,7 @@ cy.wait(3000);
 cy.xpath(this.ContextMenuBtn).click();
 cy.xpath(this.CalculateFootPrint).click();
 cy.xpath(this.CalculateFootPrintConfirm).click();
-cy.scrollTo(0,300);
+//cy.scrollTo(0,300);
 
 }
 
