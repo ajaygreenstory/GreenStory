@@ -1,0 +1,23 @@
+{
+  "name": "greenstory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loginPage.cy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.11.0"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "3.0.3",
+    "stylelint": "15.10.3"
+  }
+}
