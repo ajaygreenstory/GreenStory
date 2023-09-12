@@ -109,7 +109,7 @@ cy.get(this.LinenFabricRedioBtn).eq(0).check();
 cy.get(this.DuplicateAddBtn).click();
 cy.xpath(this.value).type("0.7");
 cy.xpath(this.submit).click();
-cy.wait(12000);
+
 }
 
 ClickOnCancelBtn()
