@@ -2,14 +2,14 @@
   "stats": {
     "suites": 0,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-09-11T13:50:00.192Z",
-    "end": "2023-09-11T13:51:05.357Z",
-    "duration": 65165,
+    "failures": 1,
+    "start": "2023-09-11T14:04:01.248Z",
+    "end": "2023-09-11T14:06:57.005Z",
+    "duration": 175757,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "24650d5c-8913-4b5f-8d35-36effcec8fff",
+      "uuid": "6396fbb7-f123-4fbe-9280-a25c1d04127b",
       "title": "",
       "fullFile": "cypress\\e2e\\spec-copy-1.cy.js",
       "file": "cypress\\e2e\\spec-copy-1.cy.js",
@@ -29,29 +29,33 @@
           "title": "LoginTests",
           "fullTitle": "LoginTests",
           "timedOut": null,
-          "duration": 62512,
-          "state": "passed",
-          "speed": "slow",
-          "pass": true,
-          "fail": false,
+          "duration": 172691,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
           "pending": false,
           "context": null,
-          "code": "cy.visit(\"https://app-staging.greenstory.ca/logout\");\ncy.fixture('loginPage').then(data => {\n  const logins = new _LoginPages.default();\n  const Profiles = new _ProfilePage.default();\n  const Listings = new _PrdListingPage.default();\n  const BasicInfo = new _BasicProductInfo.default();\n  const SCATest = new _SupplyChainAccordions.default();\n  logins.setUserName(data.username);\n  logins.setPassword(data.password);\n  logins.clickLogin();\n  //login.login(data.username,data.password);\n  //profile page\n  Profiles.clickOnProdctMenu();\n  Profiles.clickOnProduct();\n  // listing Page\n  Listings.clickOnAddProducts();\n  // Basic Info\n  //cy.fixture('loginPage').then((data) =>{\n  cy.fixture('PrdDetails').then(data => {\n    BasicInfo.setType(data.type);\n    BasicInfo.setCode(data.code);\n    BasicInfo.setName(data.name);\n    BasicInfo.setsku(data.sku);\n    BasicInfo.setCategory(data.category);\n    BasicInfo.setSubcategory(data.subcategory);\n    BasicInfo.setStyle(data.style);\n    BasicInfo.setDeparment(data.deparment);\n    BasicInfo.setWeight(data.weight);\n    BasicInfo.setWeightUnit(data.weightUnit);\n    BasicInfo.clickOnAssignDefault();\n    BasicInfo.clickOnAssignDefaultComfirm();\n    cy.wait(12000);\n    //Add Component\n    // SCATest.AddComponentDirect();\n    // SCATest.AddComponenteExitingUseAsIs();\n    // SCATest.AddComponenteExitingDuplicate();\n    // Replce Component\n    // SCATest.clickOnReplaceComponent();\n    // SCATest.ReplaceComponentDirect();\n    // SCATest.ReplaceExitingComponentUseAsIs();\n    // SCATest.ReplaceExitingComponentDuplicate();\n    SCATest.ClickOnCancelBtn();\n  });\n});",
-          "err": {},
-          "uuid": "3f07b59e-7c3c-4eb5-a3eb-f4cb2915a005",
-          "parentUUID": "24650d5c-8913-4b5f-8d35-36effcec8fff",
+          "code": "cy.visit(\"https://app-staging.greenstory.ca/logout\");\ncy.fixture('loginPage').then(data => {\n  const logins = new _LoginPages.default();\n  const Profiles = new _ProfilePage.default();\n  const Listings = new _PrdListingPage.default();\n  const BasicInfo = new _BasicProductInfo.default();\n  const SCATest = new _SupplyChainAccordions.default();\n  logins.setUserName(data.username);\n  logins.setPassword(data.password);\n  logins.clickLogin();\n  //login.login(data.username,data.password);\n  //profile page\n  Profiles.clickOnProdctMenu();\n  Profiles.clickOnProduct();\n  // listing Page\n  Listings.clickOnAddProducts();\n  // Basic Info\n  //cy.fixture('loginPage').then((data) =>{\n  cy.fixture('PrdDetails').then(data => {\n    BasicInfo.setType(data.type);\n    BasicInfo.setCode(data.code);\n    BasicInfo.setName(data.name);\n    BasicInfo.setsku(data.sku);\n    BasicInfo.setCategory(data.category);\n    BasicInfo.setSubcategory(data.subcategory);\n    BasicInfo.setStyle(data.style);\n    BasicInfo.setDeparment(data.deparment);\n    BasicInfo.setWeight(data.weight);\n    BasicInfo.setWeightUnit(data.weightUnit);\n    BasicInfo.clickOnAssignDefault();\n    BasicInfo.clickOnAssignDefaultComfirm();\n    cy.wait(12000);\n    //Add Component\n    SCATest.AddComponentDirect();\n    SCATest.AddComponenteExitingUseAsIs();\n    SCATest.AddComponenteExitingDuplicate();\n    // Replce Component\n    SCATest.clickOnReplaceComponent();\n    SCATest.ReplaceComponentDirect();\n    SCATest.ReplaceExitingComponentUseAsIs();\n    SCATest.ReplaceExitingComponentDuplicate();\n    SCATest.ClickOnCancelBtn();\n  });\n});",
+          "err": {
+            "message": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <button#prd_info-bsc_prd-abt-btn-cls.h-[32px].py-[10px].px-[14px].font-semibold.common-button--secondary.common-button--small.common-button.>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+            "estack": "CypressError: Timed out retrying after 30050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <button#prd_info-bsc_prd-abt-btn-cls.h-[32px].py-[10px].px-[14px].font-semibold.common-button--secondary.common-button--small.common-button.>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at retryActionability (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:140453:82)\n    at tryCatcher (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise.attempt.Promise.try (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16018:29)\n    at whenStable (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:156574:65)\n    at <unknown> (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:156015:14)\n    at tryCatcher (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16861:18)\n    at Promise._fulfill (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:16805:18)\n    at <unknown> (https://app-staging.greenstory.ca/__cypress/runner/cypress_runner.js:18419:46)\nFrom Your Spec Code:\n    at SupplyChainAccordions.ClickOnCancelBtn (webpack:///./cypress/PageObjects/SupplyChainAccordions.js:118:25)\n    at Context.eval (webpack:///./cypress/e2e/spec-copy-1.cy.js:62:11)",
+            "diff": null
+          },
+          "uuid": "717471b5-c52b-4dcc-b973-d15ea737ead9",
+          "parentUUID": "6396fbb7-f123-4fbe-9280-a25c1d04127b",
           "isHook": false,
           "skipped": false
         }
       ],
       "suites": [],
-      "passes": [
-        "3f07b59e-7c3c-4eb5-a3eb-f4cb2915a005"
+      "passes": [],
+      "failures": [
+        "717471b5-c52b-4dcc-b973-d15ea737ead9"
       ],
-      "failures": [],
       "pending": [],
       "skipped": [],
-      "duration": 62512,
+      "duration": 172691,
       "root": true,
       "rootEmpty": false,
       "_timeout": 2000

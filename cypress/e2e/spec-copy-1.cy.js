@@ -8,7 +8,10 @@ import SupplyChainAccordions from "../PageObjects/SupplyChainAccordions.js";
 
 //login page
 it.only('LoginTests', () => {
+  //cy.visit("https://app-dev.greenstory.ca/logout")
+   //cy.visit("https://app-qa.greenstory.ca/logout")
   cy.visit("https://app-staging.greenstory.ca/logout")
+  //cy.visit("https://app.greenstory.io/logout")
 
   cy.fixture('loginPage').then((data) =>{
    const logins = new Login ();
@@ -45,19 +48,21 @@ it.only('LoginTests', () => {
   BasicInfo.setWeightUnit(data.weightUnit);
   BasicInfo.clickOnAssignDefault();
   BasicInfo.clickOnAssignDefaultComfirm();
-  cy.wait(12000);
+  cy.wait(5000);
   
  
   //Add Component
    SCATest.AddComponentDirect();
    SCATest.AddComponenteExitingUseAsIs();
    SCATest.AddComponenteExitingDuplicate();
+   cy.wait(5000);
 
    // Replce Component
    SCATest.clickOnReplaceComponent();
    SCATest.ReplaceComponentDirect();
    SCATest.ReplaceExitingComponentUseAsIs();
    SCATest.ReplaceExitingComponentDuplicate();
+   cy.wait(10000);
  
    SCATest.ClickOnCancelBtn();
   
